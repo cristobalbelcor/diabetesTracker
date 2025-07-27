@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import QuestionnaireForm from './components/QuestionnaireForm';
-import Results from './components/Results';
+import QuestionnaireForm from '../components/QuestionnaireForm';
+import Results from '../components/Results';
 
 function App() {
   const [formData, setFormData] = useState(null);
