@@ -1,0 +1,87 @@
+/* Custom styles on top of Tailwind CSS */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+}
+
+.app-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.form-container {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Custom scrollbar for better user experience */
+.form-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+.form-container::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* Focus styles for better accessibility */
+input[type="radio"]:focus + span,
+input[type="checkbox"]:focus + span {
+  outline: 2px solid #3b82f6;
+  border-radius: 4px;
+}
+
+textarea:focus,
+input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Transition effects */
+.transition {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .form-container {
+    max-height: calc(100vh - 200px);
+  }
+}
+
+/* Adjust button hover states for touch screens */
+@media (hover: none) {
+  button:hover {
+    background-color: inherit;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+  }
+  
+  .app-container {
+    padding: 0;
+    margin: 0;
+  }
+}
